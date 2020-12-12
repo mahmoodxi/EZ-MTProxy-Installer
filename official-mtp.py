@@ -50,7 +50,7 @@ WantedBy=multi-user.target''')
     print(f"https://t.me/proxy?server={ip}&port={port}&secret=dd{secret}")
 
 else:
-    if FileExist(f"/etc/systemd/system/MTProxy.service"):
+    if FileExist(f"/etc/systemd/system/MTProxy-TLS.service"):
         os.remove("/etc/systemd/system/MTProxy-TLS.service")
     ff = open("/etc/systemd/system/MTProxy-TLS.service", "w")
     ff.write('''[Unit]
