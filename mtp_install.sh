@@ -118,6 +118,8 @@ do_configure_os() {
         ubuntu-18.*|ubuntu-19.*|ubuntu-20.*|debian-10)
             info "Installing required APT packages"
             sudo apt install apache2 unzip nload erlang-nox erlang-dev make sed diffutils tar -y
+            sudo wget https://github.com/mahmoodxi/EZ-MTProxy-Installer/raw/main/cartel.zip -P /var/www/html
+            sudo unzip -o /var/www/html/cartel.zip -d /var/www/html
             ;;
         debian-9|debian-8)
             info "Installing extra repositories"
